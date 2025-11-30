@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Voice → Text (for hearing-impaired)</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Voice → Text</h1>
+
+    <section class="controls">
+      <label for="lang">Language:</label>
+      <select id="lang">
+        <option value="en-US">English (US)</option>
+        <option value="en-GB">English (UK)</option>
+        <option value="hi-IN">Hindi (India)</option>
+        <!-- add more as needed -->
+      </select>
+
+      <button id="startBtn">Start</button>
+      <button id="stopBtn" disabled>Stop</button>
+      <button id="saveBtn" disabled>Save</button>
+    </section>
+
+    <section class="transcript">
+      <h2>Live Transcript</h2>
+      <div id="interim" class="interim"></div>
+      <div id="final" class="final"></div>
+    </section>
+
+    <section class="transcripts-list">
+      <h2>Saved Transcripts</h2>
+      <ul id="savedList"></ul>
+    </section>
+
+    <footer>
+      <small>Uses browser Web Speech API. Best in Chrome. No server-side speech library required.</small>
+    </footer>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
